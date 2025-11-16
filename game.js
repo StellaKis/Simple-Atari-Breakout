@@ -20,10 +20,11 @@ const loptica = {
     x: 0,
     y: 0,
     color: "white",
-    speed: 5,
     dx: 0,
     dy: 0  
 };
+
+const lopticaSpeed=5
 
 let cigle = [];
 
@@ -129,8 +130,8 @@ function startGame() {
         angle = 135;
     }
     const rad = angle * Math.PI / 180;
-    loptica.dx = loptica.speed * Math.cos(rad);
-    loptica.dy = -loptica.speed * Math.sin(rad);
+    loptica.dx = lopticaSpeed * Math.cos(rad);
+    loptica.dy = -lopticaSpeed * Math.sin(rad);
 
     initCigle();
 
@@ -319,11 +320,11 @@ function update() {
                 // Promjena smjera kretanja loptice po y odnosno po x te promjena brzine loptice
                 if (lopticaDonjiRub - loptica.dy <= ciglaGornjiRub ||
                     lopticaGornjiRub - loptica.dy >= ciglaDonjiRub) {
-                    loptica.dy *= (-1 * 1.02);
-                    loptica.dx *= 1.02; 
+                    loptica.dy *= (-1 * 1.015);
+                    loptica.dx *= 1.015; 
                 } else {
-                    loptica.dx *= (-1 * 1.02);
-                    loptica.dy *= 1.02; 
+                    loptica.dx *= (-1 * 1.015);
+                    loptica.dy *= 1.015; 
                 }
 
                 break; // prekid pretrage (for petlji) 
