@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fdc2ef;
+    color: #7a0160;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header h1 {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#gameCanvas {
+    border: 5px solid #ffffff;
+    background-color: black;
+}
